@@ -20,22 +20,22 @@
 // }
 
 pipeline {
-    agent any
+    agent any
 
-    stages {
-        stage('Installing dependencies') {
-            steps {
-                bat 'rm -rf /var/lib/jenkins/workspace/TML_Drishit/node_modules'
+    stages {
+        stage('Installing dependencies') {
+            steps {
+                bat 'rm -rf /var/lib/jenkins/workspace/TML_Drishit/node_modules'
                 bat 'rm -rf /var/lib/jenkins/workspace/TML_Drishit/package-lock.json'
                 bat 'npm cache clean --force'
                 bat 'npm i'
-            }
-        }
-        stage('Build') {
-            steps {
-                 bat 'npm start'
-            }
-        }
+            }
+        }
+        stage('Build') {
+            steps {
+                bat 'npm start'
+            }
+        }
 //         stage('Deploy') {
 //             steps { 
 //                 sh 'sudo rm -rf /home/sankey/design-mvp1/CVP_FMS_Design/dist'
@@ -43,7 +43,7 @@ pipeline {
 //                 sh 'sudo service nginx restart'
 //             }
 //         }
-    }
+    }
 }
 
 
