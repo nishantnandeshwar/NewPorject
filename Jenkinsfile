@@ -9,6 +9,7 @@ pipeline {
                 bat 'npm i'
             }
         }
+     }
     stages {
         stage('Build') { 
             steps {
