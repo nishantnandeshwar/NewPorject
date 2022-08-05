@@ -33,7 +33,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                bat 'npm start'
+                bat 'npm run build'
             }
         }
 //         stage('Deploy') {
